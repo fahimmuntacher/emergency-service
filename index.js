@@ -1,14 +1,16 @@
+// get element by id name
 function getElementId(id){
     const element = document.getElementById(id);
     return element;
 }
 
+// get elements by class name
 function getElementClass(id){
     const element = document.getElementsByClassName(id);
     return element;
 }
 
-// heart button
+/* ***************** Heart Button  ******************************************/
 const hearts = document.getElementsByClassName('hearts'); 
 for(let heart of hearts){
     heart.addEventListener('click', function(){
@@ -19,10 +21,11 @@ for(let heart of hearts){
 }
 
 
-// call button 
-const callBtn = document.getElementsByClassName('call-button'); 
-for(let call of callBtn){
-    call.addEventListener('click', function(){
+/* ***************** Call Button ******************************************/
+
+getElementId('card-box').addEventListener("click", function(e){
+    if(e.target.className.includes("call-button")){
+       const call = e.target;
         const cardTitle = call.parentNode.parentNode.children[1].children[0].innerText;
         const tollNum = call.parentNode.parentNode.children[1].children[2].innerText;
         const coins = getElementId('coins').innerText;
@@ -36,21 +39,6 @@ for(let call of callBtn){
             const chargeCoin = Number(coins) - 20; 
             alert("Calling to " + cardTitle + " : " + tollNum)
             document.getElementById("coins").innerText = chargeCoin;
-
-            // const historyContainer = document.getElementById("history-container");
-            // const newHitoryCart = document.createElement("div");
-            // newHitoryCart.innerHTML = `
-            //      <div class="bg-[#FAFAFA] shadow-xl rounded-2xl flex items-center justify-around w-10/12 mx-auto mb-8">
-            //             <div class="p-6">
-            //             <h1 class="text-2xl font-bold">National Emergency Number</h1>
-            //                 <h1 class="text-3xl font-bold text-gray-500">999</h1>
-            //             </div>
-            //             <div>
-            //                 <p class="text-[1.15rem]">08:21:21 pm</p>
-            //             </div>
-            //         </div>
-            // `
-            // historyContainer.append(newHitoryCart);
         }
          const historyContainer = document.getElementById("history-container");
             const newHitoryCart = document.createElement("div");
@@ -66,17 +54,17 @@ for(let call of callBtn){
                     </div>
             `
             historyContainer.append(newHitoryCart);
-        
-    })
-   
-}
+    }
+})
 
 
 
-// copy button
-const copyButtons = document.getElementsByClassName("copy-button");
-for(let copyBtn of copyButtons){
-    copyBtn.addEventListener("click", function(){
+
+/* ***************** Copy Button ******************************************/
+
+getElementId('card-box').addEventListener("click", function(copy){
+   if(copy.target.className.includes("copy-button")){
+        const copyBtn = copy.target;
         const tollNum = copyBtn.parentNode.parentNode.children[1].children[2].innerText;
         console.log(tollNum)
         navigator.clipboard.writeText(tollNum).then(() => {
@@ -85,13 +73,12 @@ for(let copyBtn of copyButtons){
         const updateCopyCount = Number(copyCount) + 1; 
         getElementId("copy-count").innerText = updateCopyCount; 
       });
-    })
-    
-    
-}
+   }
+})
 
 
 // clear button
 document.getElementById("clear-btn").addEventListener('click', function(){
-    document.getElementById('history-container').innerHTML = '';
+   
+    getElementId("history-container").innerHTML = ''; 
 })

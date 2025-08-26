@@ -18,8 +18,10 @@
     <!-- navbar  -->
     <nav class="sm:flex sm:justify-between w-[90%] mx-auto items-center pt-5 pb-5">
         <!-- left side logo and site title -->
-        <div class="flex items-center gap-2.5 space-y-3">
-            <img src="./assets/logo.png" alt="" class="w-12">
+        <div class="flex items-center justify-center gap-2.5 space-y-3">
+            <div class="w-12 flex items-center">
+                <img src="./assets/logo.png" alt="">
+            </div>
             <h1 class="text-2xl w-8/12 text-[#006747] font-bold">Emergency Service </h1>
         </div>
 
@@ -52,9 +54,9 @@
         <!-- service card   -->
 
         <section class="bg-green-50"> 
-            <div class="grid sm:grid-cols-12 pt-16 w-[90%] mx-auto gap-10">
+            <div id="service-box" class="grid sm:grid-cols-12 pt-16 w-[90%] mx-auto gap-10">
                  <!-- card list -->
-                <div class="sm:col-span-8 grid sm:grid-cols-3 gap-6 items-stretch h-fit">
+                <div id="card-box" class="sm:col-span-8 grid sm:grid-cols-3 gap-6 items-stretch h-fit">
 
                 <!-- card UI -->
                  <!-- card 1 -->
@@ -73,7 +75,7 @@
                     </div>
                     <div class="flex w-full justify-around mx-auto">
                         <button id="copy-btn" class="btn w-5/12 text-2xl p-6 text-gray-500 bg-white border-gray-300 rounded-2xl copy-button"> <i class="fa-solid fa-copy"></i> Copy</button>
-                        <button id="cal-btn" class="btn w-5/12 text-2xl p-6 bg-green-400 text-white rounded-2xl call-button"><i class="fa-solid fa-phone-volume"></i> Call</button>
+                        <button id="call-btn" class="btn w-5/12 text-2xl p-6 bg-green-400 text-white rounded-2xl call-button"><i class="fa-solid fa-phone-volume"></i> Call</button>
                     </div>
                 </div>
 
