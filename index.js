@@ -15,6 +15,7 @@ getElementId('card-box').addEventListener("click", function(h){
     if(h.target.className.includes("hearts")){
         const heartTotal = getElementId("heart").innerText;
         getElementId("heart").innerText = Number(heartTotal) + 1;
+        
     }
 })
 
