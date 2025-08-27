@@ -50,10 +50,10 @@ getElementId('card-box').addEventListener("click", function(e){
         const historyContainer = document.getElementById("history-container");
         const newHitoryCart = document.createElement("div");
         newHitoryCart.innerHTML = `
-                 <div class="bg-[#FAFAFA] shadow-xl rounded-2xl flex items-center justify-between p-5 w-10/12 mx-auto mb-8">
-                        <div class="p-4">
-                        <h1 class="text-xl font-bold">${cardTitle}</h1>
-                            <h1 class="text-2xl font-bold text-gray-500">${tollNum}</h1>
+                 <div class="bg-[#FAFAFA] shadow-xl rounded-2xl flex items-center justify-between p-3 w-10/12 mx-auto mb-8">
+                        <div class="p-2">
+                        <h1 class="text-[1rem] font-bold">${cardTitle}</h1>
+                            <h1 class="text-xl font-bold text-gray-500">${tollNum}</h1>
                         </div>
                         <div>
                             <p class="text-[1.15rem]">${time}</p>
