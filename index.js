@@ -16,18 +16,9 @@ getElementId('card-box').addEventListener("click", function(h){
         const heartTotal = getElementId("heart").innerText;
         getElementId("heart").innerText = Number(heartTotal) + 1;
         
+        
     }
 })
-
-// const hearts = document.getElementsByClassName('hearts'); 
-// for(let heart of hearts){
-//     heart.addEventListener('click', function(){
-//         const heartTotal = getElementId("heart").innerText;
-//         getElementId("heart").innerText = Number(heartTotal) + 1; 
-        
-//     })
-// }
-
 
 /* ***************** Call Button ******************************************/
 
@@ -89,3 +80,4 @@ document.getElementById("clear-btn").addEventListener('click', function(){
    
     getElementId("history-container").innerHTML = ''; 
 })
+
